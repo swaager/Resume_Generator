@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resume form</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body style="background-image: url(http://b2blink.in/wp-content/uploads/2016/03/background-learner.jpg);background-attachment: fixed;">
+	<div class="container" style="">
+		<div class="row" style="margin-top: 50px;">
+			<div class="col-sm-2">
+      </div>
+			<div class="col-sm-8" style="background-color: rgba(290,290,290,0.4);"><br>
+        <form method="POST" enctype= "multipart/form-data" action="form.php">
+          <div style="text-align:center">RESUME GENERATOR</div>
+          <br/>
+          <hr>
+					<div class="row">
+						<div class="col-sm-6">
+<label>Name</label>					
+<div class="input-group">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+    <i class="fa fa-user"></i>
+    </div>
+  </div>
+  <input type="text" required="" class="form-control" name="username">
+</div><br>
+
+<label>Contact Number</label>					
+<div class="input-group">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+    <i class="fa fa-phone"></i>
+    </div>
+  </div>
+  <input type="number" required="" class="form-control" name="contact">
+</div><br>
+
+<label>Email ID</label>					
+<div class="input-group">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+    <i class="fa fa-envelope"></i>
+    </div>
+  </div>
+  <input type="email" required="" class="form-control" name="email">
+</div><br>
+
+<label>City</label>					
+<div class="input-group">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+    <i class="fa fa-address-card"></i>
+    </div>
+  </div>
+  <input type="text" required="" class="form-control" name="city">
+</div><br>
+<label>School</label>					
+<div class="input-group">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+    <i class="fa fa-save"></i>
+    </div>
+  </div>
+  <input type="text" required="" class="form-control" name="school">
+</div><br>
+<label>College</label>					
+<div class="input-group">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+    <i class="fa fa-graduation-cap"></i>
+    </div>
+  </div>
+  <input type="text" required="" class="form-control" name="college">
+</div><br>
+<label>Facebook</label>					
+<div class="input-group">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+    <i class="fa fa-facebook"></i>
+    </div>
+  </div>
+  <input type="text" required="" class="form-control" name="facebook">
+</div><br>
+<label>Github</label>					
+<div class="input-group">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+    <i class="fa fa-github"></i>
+    </div>
+  </div>
+  <input type="text" required="" class="form-control" name="github">
+</div><br>
+
+<label>State</label>					
+<div class="input-group">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+    <i class="fa fa-address-card"></i>
+    </div>
+  </div>
+  <input type="text" required="" class="form-control" name="state">
+</div><br>							
+						</div>
+						<div class="col-sm-6">
+<label>D.O.B</label>					
+<div class="input-group">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+    <i class="fa fa-calendar"></i>
+    </div>
+  </div>
+  <input type="date" required="" class="form-control" name="date">
+</div><br>
+
+<label>Upload Image</label>					
+<center><div style="border:1px dashed #bbb;width: 130px;padding:3%;border-radius: 10px 10px;">
+	<img id="img2" class="file2" src="https://cdn4.iconfinder.com/data/icons/seo-web-blue-1/100/seo__web_blue_1_46-512.png" width="80px"  />
+    <input type="file" name="image" onchange="readURL2(this)" id="my_file2" style="display: none;" /><br>
+    <small>Upload Photos</small>
+</div></center><br>
+
+<label>About Yourself</label>	
+<textarea class="form-control" name="about"></textarea><br>
+<br>
+						</div>
+					</div>
+
+<br>
+
+<button name="submit" type="submit" class="btn btn-block btn-outline-dark">Generate Resume</button><br>
+
+
+		
+				</form>
+			</div>
+			<div class="col-sm-2"></div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function readURL2(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#img2').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        	$(".file2").click(function() {
+    $("input[id='my_file2']").click();
+});
+	</script>
+</body>
+</html>
